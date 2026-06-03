@@ -1,6 +1,9 @@
 #pragma once
-#include <stdint.h>
 
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "color.h"
 
 #pragma pack(push, 1)
 
@@ -30,9 +33,7 @@ struct BMPImage {
     int rowsize;
 }; 
 
-void write_colorgrid_to_data(struct BMPImage *image);
-void render_bmp_image_sdl2(struct BMPImage *image);
+void print_data(struct BMPImage *image);
 void init_rgb_colorgrid_bmp(struct BMPImage *image);
 void free_bmp_image(struct BMPImage *image);
 struct BMPImage* read_bmp_image(char *path);
-void print_data(struct BMPImage *image); 
